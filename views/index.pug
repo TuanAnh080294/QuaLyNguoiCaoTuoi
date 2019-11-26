@@ -1,0 +1,111 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible', content='ie=edge')
+  title Document
+  link(rel='stylesheet', href='/styles/style.css')
+header DANH S&Aacute;CH KH&Aacute;M NG&#x1AF;&#x1EDC;I CAO TU&#x1ED4;I
+.content
+  form(action='/add', method='post')
+    .form-group
+      label(for='') H&#x1ECD; V&agrave; T&ecirc;n
+      input#txtTen(type='text', name='txtTen')
+    .form-group
+      label(for='') N&abreve;m Sinh
+      input#txtxNamSinh(type='text', name='txtNamSinh')
+    .form-group
+      label(for='') &Dstrok;&#x1ECB;a Ch&#x1EC9;
+      input#txtDiaChi(type='text', name='txtDiaChi')
+    .form-group
+      label(for='') X&atilde;
+      input#txtXa(type='text', name='txtXa')
+    button Th&ecirc;m
+    button Xem Danh S&aacute;ch
+  .table
+    .row.header
+      .cell
+        | H&#x1ECD; V&agrave; T&ecirc;n
+      .cell
+        | N&abreve;m Sinh
+      .cell
+        | &Dstrok;&#x1ECB;a Ch&#x1EC9;
+      .cell
+        | X&atilde;
+      .cell
+        | Ng&agrave;y Kh&aacute;m
+      .cell
+        | Ghi Ch&uacute;
+    .row
+      .cell(data-title='Full Name')
+        | Tr&#x1EA7;n Nguy&#x1EC5;n Th&#x1EE5;y Ng&#x1ECD;c Anh
+      .cell(data-title='Age')
+        | 31
+      .cell(data-title='Job Title')
+        | iOS Developer
+      .cell(data-title='Location')
+        | Washington
+    .row
+      .cell(data-title='Full Name')
+        | Joseph Smith
+      .cell(data-title='Age')
+        | 27
+      .cell(data-title='Job Title')
+        | Project Manager
+      .cell(data-title='Location')
+        | Somerville, MA
+    .row
+      .cell(data-title='Full Name')
+        | Justin Black
+      .cell(data-title='Age')
+        | 26
+      .cell(data-title='Job Title')
+        | Front-End Developer
+      .cell(data-title='Location')
+        | Los Angeles
+    .row
+      .cell(data-title='Full Name')
+        | Sean Guzman
+      .cell(data-title='Age')
+        | 25
+      .cell(data-title='Job Title')
+        | Web Designer
+      .cell(data-title='Location')
+        | San Francisco
+    .row
+      .cell(data-title='Full Name')
+        | Keith Carter
+      .cell(data-title='Age')
+        | 20
+      .cell(data-title='Job Title')
+        | Graphic Designer
+      .cell(data-title='Location')
+        | New York, NY
+    .row
+      .cell(data-title='Full Name')
+        | Austin Medina
+      .cell(data-title='Age')
+        | 32
+      .cell(data-title='Job Title')
+        | Photographer
+      .cell(data-title='Location')
+        | New York
+    .row
+      .cell(data-title='Full Name')
+        | Vincent Williamson
+      .cell(data-title='Age')
+        | 31
+      .cell(data-title='Job Title')
+        | iOS Developer
+      .cell(data-title='Location')
+        | Washington
+    .row
+      .cell(data-title='Full Name')
+        | Joseph Smith
+      .cell(data-title='Age')
+        | 27
+      .cell(data-title='Job Title')
+        | Project Manager
+      .cell(data-title='Location')
+        | Somerville, MA
+footer
