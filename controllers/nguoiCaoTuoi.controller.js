@@ -1,12 +1,20 @@
 var db = require('../db');
-var dataIndex = db.get('Sheet1').value().sort(function (a, b) {
-    return a.Stt - b.Stt;
-}).slice(0, 10)
 var data = db.get('Sheet1').value();
 
+
 module.exports.index = function (req, res) {
+    var arrData = [];
+
+    for(var i=0; i<db.get('Sheet1').size().value(); i++) {
+        arrData.push(data[i]);
+    }
+    
+    arrIndex = arrData.sort(function(a, b) {
+        return b.Stt - a.Stt;
+    }).slice(0, 10);
+
     res.render('index', {
-        users: dataIndex,
+        users: arrIndex,
         data: data
     })
 }
