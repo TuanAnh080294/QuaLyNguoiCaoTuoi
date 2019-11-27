@@ -3,10 +3,10 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: 'Roboto',sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-image: linear-gradient(to right top, #050937, #273261, #4b5d8e, #718cbc, #9bbdeb);
   color: whitesmoke;
-  overflow: hidden;
+  overflow-x: hidden;
   height: 100vh;
 }
 
@@ -47,13 +47,13 @@ header {
   font-weight: bold;
 }
 
-form  {
+form {
   width: 100%;
   float: left;
   margin-bottom: 20px;
 }
 
-form .form-group  {
+form .form-group {
   float: left;
   margin: 0 20px 20px 0;
   width: 40%;

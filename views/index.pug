@@ -35,77 +35,13 @@ header DANH S&Aacute;CH KH&Aacute;M NG&#x1AF;&#x1EDC;I CAO TU&#x1ED4;I
       .cell
         | Ng&agrave;y Kh&aacute;m
       .cell
-        | Ghi Ch&uacute;
-    .row
-      .cell(data-title='Full Name')
-        | Tr&#x1EA7;n Nguy&#x1EC5;n Th&#x1EE5;y Ng&#x1ECD;c Anh
-      .cell(data-title='Age')
-        | 31
-      .cell(data-title='Job Title')
-        | iOS Developer
-      .cell(data-title='Location')
-        | Washington
-    .row
-      .cell(data-title='Full Name')
-        | Joseph Smith
-      .cell(data-title='Age')
-        | 27
-      .cell(data-title='Job Title')
-        | Project Manager
-      .cell(data-title='Location')
-        | Somerville, MA
-    .row
-      .cell(data-title='Full Name')
-        | Justin Black
-      .cell(data-title='Age')
-        | 26
-      .cell(data-title='Job Title')
-        | Front-End Developer
-      .cell(data-title='Location')
-        | Los Angeles
-    .row
-      .cell(data-title='Full Name')
-        | Sean Guzman
-      .cell(data-title='Age')
-        | 25
-      .cell(data-title='Job Title')
-        | Web Designer
-      .cell(data-title='Location')
-        | San Francisco
-    .row
-      .cell(data-title='Full Name')
-        | Keith Carter
-      .cell(data-title='Age')
-        | 20
-      .cell(data-title='Job Title')
-        | Graphic Designer
-      .cell(data-title='Location')
-        | New York, NY
-    .row
-      .cell(data-title='Full Name')
-        | Austin Medina
-      .cell(data-title='Age')
-        | 32
-      .cell(data-title='Job Title')
-        | Photographer
-      .cell(data-title='Location')
-        | New York
-    .row
-      .cell(data-title='Full Name')
-        | Vincent Williamson
-      .cell(data-title='Age')
-        | 31
-      .cell(data-title='Job Title')
-        | iOS Developer
-      .cell(data-title='Location')
-        | Washington
-    .row
-      .cell(data-title='Full Name')
-        | Joseph Smith
-      .cell(data-title='Age')
-        | 27
-      .cell(data-title='Job Title')
-        | Project Manager
-      .cell(data-title='Location')
-        | Somerville, MA
+          Ghi Chú
+    each user in users
+      .row
+        .cell(data-title='HoTen')= user.HoTen
+        .cell(data-title='NamSinh')= user.NamSinh
+        .cell(data-title='DiaChi')= user.DiaChi
+        .cell(data-title='Xa')= user.Xa
+        .cell(data-title='NgayKham')= user.NgayKham
+        .cell(data-title='GhiChu')= user.GhiChu
 footer
