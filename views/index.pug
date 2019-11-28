@@ -6,14 +6,15 @@ head
   title Document
   link(rel='stylesheet', href='/styles/style.css')
 header DANH S&Aacute;CH KH&Aacute;M NG&#x1AF;&#x1EDC;I CAO TU&#x1ED4;I
+
 .content
   form(action='/add', method='post')
     .form-group
       label(for='') H&#x1ECD; V&agrave; T&ecirc;n
-      input#txtTen(type='text', name='txtTen')
+      input#txtTen.txtTen(type='text', name='txtTen')
     .form-group
       label(for='') N&abreve;m Sinh
-      input#txtxNamSinh(type='text', name='txtNamSinh')
+      input#txtNamSinh(type='text', name='txtNamSinh')
     .form-group
       label(for='') &Dstrok;&#x1ECB;a Ch&#x1EC9;
       input#txtDiaChi(type='text', name='txtDiaChi')
@@ -36,12 +37,26 @@ header DANH S&Aacute;CH KH&Aacute;M NG&#x1AF;&#x1EDC;I CAO TU&#x1ED4;I
         | Ng&agrave;y Kh&aacute;m
       .cell
           Ghi Chú
-    each user in users
-      .row
-        .cell(data-title='HoTen')= user.HoTen
-        .cell(data-title='NamSinh')= user.NamSinh
-        .cell(data-title='DiaChi')= user.DiaChi
-        .cell(data-title='Xa')= user.Xa
-        .cell(data-title='NgayKham')= user.NgayKham
-        .cell(data-title='GhiChu')= user.GhiChu
+    script.
+      var ten = document.querySelector('.txtTen').value;
+    if ten=""
+        each user in users
+          .row
+            .cell(data-title='HoTen')= user.HoTen
+            .cell(data-title='NamSinh')= user.NamSinh
+            .cell(data-title='DiaChi')= user.DiaChi
+            .cell(data-title='Xa')= user.Xa
+            .cell(data-title='NgayKham')= user.NgayKham
+            .cell(data-title='GhiChu')= user.GhiChu
+    else
+        each user in data.filter(function(user) {
+          return user.HoTen = ten;
+        })
+          .row
+            .cell(data-title='HoTen')= user.HoTen
+            .cell(data-title='NamSinh')= user.NamSinh
+            .cell(data-title='DiaChi')= user.DiaChi
+            .cell(data-title='Xa')= user.Xa
+            .cell(data-title='NgayKham')= user.NgayKham
+            .cell(data-title='GhiChu')= user.GhiChu  
 footer

@@ -1,6 +1,5 @@
 var db = require('../db');
 const shortid = require('shortid');
-var data = db.get('Sheet1').value();
 
 
 var getDate = function () {
@@ -13,6 +12,7 @@ var getDate = function () {
 }
 
 module.exports.index = function (req, res) {
+    var data = db.get('Sheet1').value();
     var NgayKham = getDate();
     var arrData = [];
     var arrIndex = []
@@ -36,23 +36,12 @@ module.exports.index = function (req, res) {
     for (var i = 0; i < lengthIndex; i++) {
         arrIndex.push(dataIndex[i]);
     }
-
-    arrIndex.sort(function (a, b) {
-        return a._id - b._id;
-    });
-
-    console.log(arrIndex);
-
-    // arrIndex = arrData.sort(function (a, b) {
-    //     return b.Stt - a.Stt;
-    // }).slice(0, 10);
-
-
-
+    arrIndex.reverse();
     res.render('index', {
         users: arrIndex,
-        data: data
+        data: arrData
     })
+    res.send(arrData)
 }
 
 module.exports.add = function (req, res) {
@@ -78,13 +67,3 @@ module.exports.add = function (req, res) {
         .write();
     res.redirect('/');
 }
-
-module.exports.search = function () {
-    var HoTen = HTML.getElementsById()
-}
-
-// module.exports.deleteStt = function (req, res) {
-//     // var i = 0;
-//     db.unset('Sheet1.Stt')
-//         .write()
-// }
