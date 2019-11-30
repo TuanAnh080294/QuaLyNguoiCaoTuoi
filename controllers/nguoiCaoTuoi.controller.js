@@ -41,7 +41,6 @@ module.exports.index = function (req, res) {
         users: arrIndex,
         data: arrData
     })
-    res.send(arrData)
 }
 
 module.exports.add = function (req, res) {

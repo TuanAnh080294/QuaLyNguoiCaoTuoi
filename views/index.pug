@@ -37,26 +37,31 @@ header DANH S&Aacute;CH KH&Aacute;M NG&#x1AF;&#x1EDC;I CAO TU&#x1ED4;I
         | Ng&agrave;y Kh&aacute;m
       .cell
           Ghi Chú
-    script.
-      var ten = document.querySelector('.txtTen').value;
-    if ten=""
-        each user in users
-          .row
-            .cell(data-title='HoTen')= user.HoTen
-            .cell(data-title='NamSinh')= user.NamSinh
-            .cell(data-title='DiaChi')= user.DiaChi
-            .cell(data-title='Xa')= user.Xa
-            .cell(data-title='NgayKham')= user.NgayKham
-            .cell(data-title='GhiChu')= user.GhiChu
-    else
-        each user in data.filter(function(user) {
-          return user.HoTen = ten;
-        })
-          .row
-            .cell(data-title='HoTen')= user.HoTen
-            .cell(data-title='NamSinh')= user.NamSinh
-            .cell(data-title='DiaChi')= user.DiaChi
-            .cell(data-title='Xa')= user.Xa
-            .cell(data-title='NgayKham')= user.NgayKham
-            .cell(data-title='GhiChu')= user.GhiChu  
+    each user in users
+      .row
+        .cell(data-title='HoTen')= user.HoTen
+        .cell(data-title='NamSinh')= user.NamSinh
+        .cell(data-title='DiaChi')= user.DiaChi
+        .cell(data-title='Xa')= user.Xa
+        .cell(data-title='NgayKham')= user.NgayKham
+        .cell(data-title='GhiChu')= user.GhiChu
+    //- else
+    //-     each user in data.filter(function(user) {
+    //-       return user.HoTen = ten;
+    //-     })
+    //-       .row
+    //-         .cell(data-title='HoTen')= user.HoTen
+    //-         .cell(data-title='NamSinh')= user.NamSinh
+    //-         .cell(data-title='DiaChi')= user.DiaChi
+    //-         .cell(data-title='Xa')= user.Xa
+    //-         .cell(data-title='NgayKham')= user.NgayKham
+    //-         .cell(data-title='GhiChu')= user.GhiChu  
+  //- script.
+  //-     var ten = document.querySelector('.txtTen').value;
+  //-     const low = require('lowdb');
+  //-     const fileSync = require('lowdb/adapters/FileSync');
+
+  //-     const adapters = new fileSync('data.json');
+  //-     const db = low(adapters);
+  //-     console.log(db)
 footer
