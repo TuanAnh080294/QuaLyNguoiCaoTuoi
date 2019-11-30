@@ -1,4 +1,4 @@
-var db = require(__dirname + 'db');
+var db = require('../db');
 const shortid = require('shortid');
 
 
